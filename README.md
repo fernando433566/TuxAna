@@ -11,7 +11,7 @@ es **idéntico al de Windows** (verificado muestra a muestra; ver [docs/TECNICO.
 | `linux/amd64` | Wine nativo | ~0,3 s | 10–40 ms |
 | `linux/arm64` (Raspberry Pi 4/5…) | Wine x86_64 sobre el emulador **box64** | ~60 s | 0,1–0,3 s |
 
-Imagen Docker (amd64 + arm64): [`ghcr.io/fernando433566/tuxana`](https://github.com/fernando433566/TuxAna/pkgs/container/tuxana) · Licencia: [MIT](LICENSE)
+Imagen Docker (amd64 + arm64): [`ghcr.io/fernando433566/tuxana`](https://github.com/users/fernando433566/packages/container/package/tuxana) · Licencia: [MIT](LICENSE)
 
 > ⚠️ **Necesitas un Windows 10 propio.** Los ficheros de la voz y del motor son de Microsoft. **No están en este
 > repositorio ni en las imágenes**: un script los copia de tu Windows (ver [windows-files/](windows-files/README.md)).
