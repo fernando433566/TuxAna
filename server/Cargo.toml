@@ -1,0 +1,12 @@
+[package]
+name = "tuxana"
+version = "1.0.0"
+edition = "2021"
+description = "Wyoming text-to-speech server for Microsoft Ana (Cortana's Spanish voice) running in Wine"
+
+[dependencies]
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+strip = true

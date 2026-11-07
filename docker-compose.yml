@@ -1,0 +1,24 @@
+# TuxAna: la voz de Cortana (Microsoft Ana, es-ES) como servidor Wyoming para Home Assistant.
+#
+#   1. windows-files/collect.sh usuario@ip-de-windows     (copia los ficheros de Ana de tu Windows)
+#   2. docker compose up -d                               (descarga la imagen de GHCR; o compílala: docker compose build)
+#   3. Home Assistant -> Wyoming Protocol -> host:10200
+#
+# El primer arranque crea el prefijo de Wine en el volumen (≈1 min en x86_64, varios minutos en una Raspberry Pi).
+services:
+  tuxana:
+    image: ghcr.io/fernando433566/tuxana:latest
+    build: .
+    container_name: tuxana
+    restart: unless-stopped
+    ports:
+      - "10200:10200"
+    volumes:
+      - ./windows-files/files:/opt/ana/voice-files:ro   # ficheros de Microsoft, de tu propio Windows
+      - tuxana-data:/data                               # prefijo de Wine (se crea en el primer arranque)
+    environment:
+      ANA_RATE: "0"             # velocidad de habla -10..10; 0 = exactamente como Windows
+      ANA_SAMPLE_RATE: "22050"  # Hz
+
+volumes:
+  tuxana-data:

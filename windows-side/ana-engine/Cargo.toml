@@ -1,0 +1,9 @@
+[package]
+name = "ana-engine"
+version = "1.0.0"
+edition = "2021"
+description = "Keeps Microsoft Ana loaded inside Wine and streams synthesized PCM over stdout"
+
+[dependencies]
+windows = { workspace = true }
+windows-core = { workspace = true }

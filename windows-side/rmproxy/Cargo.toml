@@ -1,0 +1,12 @@
+[package]
+name = "rmproxy"
+version = "1.0.0"
+edition = "2021"
+description = "COM shim that lets the Windows OneCore TTS engine run on the Speech Platform 11 runtime"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+windows = { workspace = true }
+windows-core = { workspace = true }

@@ -1,0 +1,6 @@
+494d7dd162e866abea521b8f15db45e25734cf017c2b515db1a227825bfcb159  bin/amd64/tuxana
+5624c3242be12faa10784a2856240568c860f8e54fe6d08255121ea34490e5f2  bin/arm64/tuxana
+86c6b68356d553fd2bcecdbe20cb887c93dfa7a1f053a4b0d87572d4df81d3fe  bin/windows/ana-engine.exe
+08dcd928b7935973a045205b62cbc13ac1810ac84ccd762f5f4ab10d3e421fd0  bin/windows/rmproxy.dll
+e623f1eaca4231b0fb994ce50f8b2a314fed2c588e233c65df1e83b9964d1668  images/tuxana-1.0.0-amd64.tar
+93f7623de0985859dff03fe05cadbdfb3f38da9bfdada8efcf8e9939afe2abe7  images/tuxana-1.0.0-arm64.tar

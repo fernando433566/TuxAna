@@ -1,0 +1,23 @@
+# Programs that run *inside Wine* (Windows x86_64 binaries).
+# Build: cargo build --release --target x86_64-pc-windows-gnu
+[workspace]
+resolver = "2"
+members = ["ana-engine", "rmproxy"]
+
+[workspace.dependencies]
+# windows-core is needed by the #[implement] macro (it is how we write COM objects in Rust)
+windows-core = "0.58"
+windows = { version = "0.58", features = [
+    "implement",
+    "Win32_Foundation",
+    "Win32_Media_Audio",
+    "Win32_Media_Speech",
+    "Win32_System_Com",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Registry",
+] }
+
+[profile.release]
+opt-level = 2
+strip = true

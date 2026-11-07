@@ -1,0 +1,26 @@
+# Ficheros de Windows 10 que forman Microsoft Ana (Cortana es-ES). Generado desde Windows 10 Home 22H2 build 19045.6456.
+# ruta_en_windows	destino_en_files/	bytes	sha256
+C:\Windows\System32\Speech_OneCore\Engines\TTS\MSTTSEngine_OneCore.dll	engine/MSTTSEngine_OneCore.dll	2142720	27599c13135ab143b5a879a46c8a2b729c2532aca5dd4f93f8cb90c01afd33a1
+C:\Windows\System32\Speech_OneCore\Engines\TTS\MSTTSLoc_OneCore.dll	engine/MSTTSLoc_OneCore.dll	804352	e9d69caea9d644b6d05166fbba791ba287d81ab093433da26ddf2647ea5ec88b
+C:\Windows\System32\msvcp110_win.dll	engine/msvcp110_win.dll	561568	a6fdf765b9a9c422360903af7ff6bff55129aeaeed305b3d14445a486d32bd52
+C:\Windows\Speech_OneCore\Engines\TTS\en-US\MSTTSLocEnUS.dat	tts/en-US/MSTTSLocEnUS.dat	9749096	b89cb766c4a0f23e2ad1a2b137e67aa5b4c1c5419c00fe11fb761c0d2d21c7b6
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\EsES.Address.dat	tts/es-ES/EsES.Address.dat	5144	af8dbd0ed631d62a54a20b306933e5917aae0b8fc7c91a53bafb053247844d85
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\EsES.Computer.dat	tts/es-ES/EsES.Computer.dat	3272	68f9d2a4ec0601c27f422d634cc765d3b58105f76fa18852d90bb2faa4bfe478
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\EsES.Name.dat	tts/es-ES/EsES.Name.dat	3128	ab14520cde7b2c3d9a3c8dc1c943b0c5af3ac83d3906890ca54170ad586fe33a
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\M3082Ana.APM	tts/es-ES/M3082Ana.APM	6869968	7c0dfa238c103cfdee00b99636f77330ec4abe6489d5bfe07646f4025aadff6d
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\M3082Ana.BR2	tts/es-ES/M3082Ana.BR2	2079664	ef9d95d10714ddd1db5d324866f232c29599396a4535a013473826e7bb11a17c
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\M3082Ana.INI	tts/es-ES/M3082Ana.INI	774	dfd8f1879d78967345e26350abc76817aec9a63a508e429a5e50ed6feed5a8d8
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\M3082Ana.TON	tts/es-ES/M3082Ana.TON	67780	08b571fb1efd63194df532c4d4d0a6d505091daf06e62ff984a5c2f3e38c8fe0
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\M3082Ana.bep	tts/es-ES/M3082Ana.bep	4496	82bd6d6ab406d1a5d66ccc04e1d782aa33f2e51ef0fe7201572fdfa7587b100a
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\M3082Ana.heq	tts/es-ES/M3082Ana.heq	1672	af6b61ef95af069ebc284b5af7e9b640f079193e35b50ea93dc6db8e5114fbb8
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\MSTTSLocEsES.INI	tts/es-ES/MSTTSLocEsES.INI	714	67df2267a748cbe682038acbed53fe45656c038451eb4f3af2c29f8bfc35a266
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\MSTTSLocEsES.dat	tts/es-ES/MSTTSLocEsES.dat	2868160	238f795d49de9717fbc97b59913b92c86d6e262786018102c988ddb0607a2804
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.tbtdirection.TNU	tts/es-ES/NUSData/M3082Ana.tbtdirection.TNU	577100	e83f523317bb1c13b05010171e86a77253619c771ecc9e744040c5df1d52c05b
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.tbtdirection.unt	tts/es-ES/NUSData/M3082Ana.tbtdirection.unt	299732	58bf6306db16ae6ba60458f41fd782b72318c2d07a0131966891bd68e87a3571
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.tbtdirection.wih	tts/es-ES/NUSData/M3082Ana.tbtdirection.wih	52	8993e3e51a91d97b8dd746cd8ca56be1d03d63222951b5408ceece4ddad26e4d
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.tbtdirection.wve	tts/es-ES/NUSData/M3082Ana.tbtdirection.wve	3819982	61e9656d03c8069656a3432e50963d0315f60b40607c7c342c25831a2ba8bcee
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.voiceAssistant.TNU	tts/es-ES/NUSData/M3082Ana.voiceAssistant.TNU	2599232	fa8cc4a306dff08a8c03b66d0e916b9162d1c8abafafb0d279cce08d07a3c961
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.voiceAssistant.unt	tts/es-ES/NUSData/M3082Ana.voiceAssistant.unt	1597682	c4240c66b47bd07b5ab8132a4a4931d4fba30968557084fa8741b3f946468527
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.voiceAssistant.wih	tts/es-ES/NUSData/M3082Ana.voiceAssistant.wih	52	8993e3e51a91d97b8dd746cd8ca56be1d03d63222951b5408ceece4ddad26e4d
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\NUSData\M3082Ana.voiceAssistant.wve	tts/es-ES/NUSData/M3082Ana.voiceAssistant.wve	13822018	b737da8b0c4fc553606374dd3e3739a73fc80a1184f5a6ccc7d618ab0b00ef80
+C:\Windows\Speech_OneCore\Engines\TTS\es-ES\esES.Message.dat	tts/es-ES/esES.Message.dat	5744	4e4d16710f1fdcff6a46c55d103d782fd9d3b56866ddaf62c17c1b08838568d9

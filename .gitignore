@@ -1,0 +1,11 @@
+# Compilación
+target/
+
+# Ficheros de Microsoft copiados de tu Windows: NO se publican
+windows-files/files/
+windows-files/files.tmp/
+
+# Imágenes Docker exportadas (pesan cientos de MB): van como adjuntos de una Release, no en git
+dist/images/
+dist/.out-*/
+*.tar

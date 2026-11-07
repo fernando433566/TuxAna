@@ -1,0 +1,69 @@
+Windows Registry Editor Version 5.00
+
+; ---------------------------------------------------------------------------------------------
+; The voice: a Speech Platform 11 token that points at the Windows 10 OneCore engine and Ana's data.
+; ---------------------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech Server\v11.0\Voices\Tokens\MSTTS_V110_esES_Ana]
+@="Microsoft Ana - Spanish (Spain)"
+"C0A"="Microsoft Ana - Spanish (Spain)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"="C:\\windows\\Speech_OneCore\\Engines\\TTS\\es-ES\\MSTTSLocEsES.dat"
+"VoicePath"="C:\\windows\\Speech_OneCore\\Engines\\TTS\\es-ES\\M3082Ana"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech Server\v11.0\Voices\Tokens\MSTTS_V110_esES_Ana\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.0129"
+"Gender"="Female"
+"Language"="C0A"
+"Name"="Microsoft Ana"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+; ---------------------------------------------------------------------------------------------
+; The OneCore engine (MSTTSEngine_OneCore.dll)
+; ---------------------------------------------------------------------------------------------
+[HKEY_CLASSES_ROOT\CLSID\{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}]
+@="Microsoft TTS Desktop Engine Class - OneCore"
+[HKEY_CLASSES_ROOT\CLSID\{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\Engines\\TTS\\MSTTSEngine_OneCore.dll"
+"ThreadingModel"="Both"
+
+; ---------------------------------------------------------------------------------------------
+; Classes of sapi_onecore.dll (which Wine cannot load) -> rmproxy.dll forwards them to the
+; Speech Platform 11 equivalents (mssps.dll), or serves an empty lexicon.
+; ---------------------------------------------------------------------------------------------
+; SpResourceManager
+[HKEY_CLASSES_ROOT\CLSID\{0eef5fbe-18f3-478a-bd28-4899c2e90323}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\common\\rmproxy.dll"
+"ThreadingModel"="Both"
+[HKEY_CLASSES_ROOT\CLSID\{0eef5fbe-18f3-478a-bd28-4899c2e90323}\ProxyTarget]
+@="{d56d7ab0-a54c-4cee-a78c-d1ebb080f3d8}"
+
+; SpPhoneticAlphabetConverter
+[HKEY_CLASSES_ROOT\CLSID\{17383a17-6b93-4193-9b60-4d4f99c05163}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\common\\rmproxy.dll"
+"ThreadingModel"="Both"
+[HKEY_CLASSES_ROOT\CLSID\{17383a17-6b93-4193-9b60-4d4f99c05163}\ProxyTarget]
+@="{379af0c8-b44c-48ec-94ed-4b15f3c7a0b5}"
+
+; SpObjectTokenCategory
+[HKEY_CLASSES_ROOT\CLSID\{461ded9e-81d5-494f-bc96-6432c8645733}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\common\\rmproxy.dll"
+"ThreadingModel"="Both"
+[HKEY_CLASSES_ROOT\CLSID\{461ded9e-81d5-494f-bc96-6432c8645733}\ProxyTarget]
+@="{bf86f6c4-f9ce-441a-821a-415a76b86d79}"
+
+; SpPhoneConverter
+[HKEY_CLASSES_ROOT\CLSID\{c6fabb24-e332-46fb-bc91-ff331b2d51f0}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\common\\rmproxy.dll"
+"ThreadingModel"="Both"
+[HKEY_CLASSES_ROOT\CLSID\{c6fabb24-e332-46fb-bc91-ff331b2d51f0}\ProxyTarget]
+@="{5695ad90-c86e-4b12-a42c-327d1c2ca35f}"
+
+; SpLexicon (user lexicon) -> empty lexicon inside rmproxy.dll
+[HKEY_CLASSES_ROOT\CLSID\{67677441-3350-45b4-9455-4d7f4a50f4e4}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\common\\rmproxy.dll"
+"ThreadingModel"="Both"
+[HKEY_CLASSES_ROOT\CLSID\{67677441-3350-45b4-9455-4d7f4a50f4e4}\ProxyTarget]
+@="stub-lexicon"

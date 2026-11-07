@@ -1,0 +1,8 @@
+# Nada de Microsoft entra en la imagen: los ficheros de Ana se montan al ejecutar el contenedor
+windows-files/files
+windows-files/files.tmp
+dist
+**/target
+*.tar
+*.wav
+.git
