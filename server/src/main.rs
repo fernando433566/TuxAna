@@ -1,12 +1,12 @@
 //! TuxAna (`tuxana`): a Wyoming text-to-speech server (the protocol Home Assistant uses for Piper)
 //! that speaks with Microsoft Ana, the Spanish (Spain) voice of Cortana.
 //!
-//! The voice is Microsoft's original Windows 10 OneCore engine, run by Wine (and on ARM by box64).
+//! The voice is Microsoft's original Windows OneCore engine, run by Wine.
 //! This program only does the networking; the speech itself comes from `ana-engine.exe` (see engine.rs).
 //!
 //! Options (each one can also be given as an environment variable):
 //!   --uri tcp://0.0.0.0:10200      WYOMING_URI          where to listen
-//!   --wine /usr/local/bin/wine     ANA_WINE             command that runs Wine (box64 wrapper on ARM)
+//!   --wine /opt/wine/bin/wine      ANA_WINE             command that runs Wine
 //!   --engine-exe <path>            ANA_ENGINE_EXE       ana-engine.exe
 //!   --sample-rate 22050            ANA_SAMPLE_RATE      output sample rate (Hz)
 //!   --rate 0                       ANA_RATE             speaking rate, -10..10 (0 = like Windows)
@@ -27,7 +27,7 @@ use handler::{handle_client, Context};
 fn main() {
     let uri = option("--uri", "WYOMING_URI", "tcp://0.0.0.0:10200");
     let settings = EngineSettings {
-        wine: option("--wine", "ANA_WINE", "/usr/local/bin/wine").into(),
+        wine: option("--wine", "ANA_WINE", "/opt/wine/bin/wine").into(),
         engine_exe: option("--engine-exe", "ANA_ENGINE_EXE", "/opt/ana/windows/ana-engine.exe").into(),
         sample_rate: number(option("--sample-rate", "ANA_SAMPLE_RATE", "22050"), "--sample-rate"),
         speaking_rate: number(option("--rate", "ANA_RATE", "0"), "--rate"),

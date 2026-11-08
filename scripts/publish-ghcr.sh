@@ -3,7 +3,6 @@
 # con las etiquetas "latest" y la versión de server/Cargo.toml, en un PC x86_64 con Docker y buildx.
 #
 # Antes, una vez:
-#   docker run --privileged --rm tonistiigi/binfmt --install arm64         (emulación ARM, por arranque del PC)
 #   echo "$TOKEN" | docker login ghcr.io -u <usuario> --password-stdin      (token con permiso write:packages)
 #
 #   scripts/publish-ghcr.sh [ghcr.io/<usuario>/tuxana]

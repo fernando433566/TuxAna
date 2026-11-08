@@ -1,7 +1,7 @@
 //! Talks to `ana-engine.exe`, the Windows program (running in Wine) that owns Microsoft Ana.
 //!
-//! The engine is started once and kept alive: starting Wine and loading the voice takes from a few
-//! seconds (x86_64) to about two minutes (Raspberry Pi with box64), synthesizing then takes milliseconds.
+//! The engine is started once and kept alive: starting Wine and loading the voice takes a few
+//! seconds at most, synthesizing then takes milliseconds.
 //! The protocol is described at the top of `windows-side/ana-engine/src/main.rs`.
 
 use std::io::{self, BufReader, Read, Write};
@@ -45,7 +45,6 @@ struct Engine {
 
 impl Engine {
     fn start(settings: &EngineSettings) -> io::Result<Engine> {
-        // On x86_64 `wine` is Wine itself; on ARM it is a small script that runs Wine through box64.
         let mut command = Command::new(&settings.wine);
         command
             .arg(&settings.engine_exe)

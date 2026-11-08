@@ -15,15 +15,16 @@ TuxAna (licencia MIT, ver [LICENSE](LICENSE)) existe gracias a estos proyectos.
 
 | Componente | Uso en TuxAna | Licencia | Origen |
 |---|---|---|---|
-| Wine 11.17 (compilación de Kron4ek, `amd64-wow64`) | Ejecuta los programas de Windows | LGPL-2.1-or-later | https://www.winehq.org/ (código fuente) · https://github.com/Kron4ek/Wine-Builds/releases/tag/11.17 |
-| box64 (commit `b71b00322ec4`) | Emula x86_64 en la imagen arm64 | MIT | https://github.com/ptitSeb/box64 |
+| Wine 11.17 | Ejecuta los programas de Windows: compilación de Kron4ek (`amd64-wow64`) en x86-64, compilado desde el código fuente en ARM64 | LGPL-2.1-or-later | https://www.winehq.org/ (código fuente: https://dl.winehq.org/wine/source/11.x/wine-11.17.tar.xz) · https://github.com/Kron4ek/Wine-Builds/releases/tag/11.17 |
 | `windows`, `windows-core` 0.58 (crates de Rust) | COM/Win32 en `ana-engine` y `rmproxy` | MIT OR Apache-2.0 | https://github.com/microsoft/windows-rs |
 | `serde_json` 1 (crate de Rust) | JSON del protocolo Wyoming | MIT OR Apache-2.0 | https://github.com/serde-rs/json |
 | Debian 12 "bookworm" | Base de las imágenes | Varias (DFSG) | https://www.debian.org/ |
 
 Herramientas de compilación (no se incluyen en las imágenes): [Rust](https://www.rust-lang.org/) 1.83,
-[MinGW-w64](https://www.mingw-w64.org/), [Docker Buildx](https://github.com/docker/buildx) y
-[tonistiigi/binfmt](https://github.com/tonistiigi/binfmt) (QEMU, para compilar la imagen arm64 desde x86_64).
+[MinGW-w64](https://www.mingw-w64.org/), [llvm-mingw](https://github.com/mstorsjo/llvm-mingw) (Apache-2.0 / ISC) para Windows
+ARM64 y [Docker Buildx](https://github.com/docker/buildx).
+
+[box64](https://github.com/ptitSeb/box64) (MIT, de ptitSeb) hizo posible TuxAna 1.0.0 en ARM; desde 1.1.0 ya no se usa ni se incluye.
 
 ### wine-tts
 
@@ -53,10 +54,10 @@ IN THE SOFTWARE.
 
 ## NO incluido (software de Microsoft)
 
-- **Ficheros de Microsoft Ana y del motor OneCore de Windows 10**: no están en este repositorio ni en las
-  imágenes. Cada usuario los copia de su propio Windows (`windows-files/collect.sh`) y se montan al ejecutar
+- **Ficheros de Microsoft Ana y del motor OneCore de Windows** (Windows 10 u 11, x86-64 o ARM64): no están en este
+  repositorio ni en las imágenes. Cada usuario los copia de su propio Windows (`windows-files/collect.sh`) y se montan al ejecutar
   el contenedor. Su uso queda sujeto a la licencia de Windows de quien los copia.
-- **Microsoft Speech Platform Runtime 11.0 (x64)**: el contenedor lo descarga de los servidores de Microsoft
+- **Microsoft Speech Platform Runtime 11.0 (x64)**: solo en x86-64, el contenedor lo descarga de los servidores de Microsoft
   en el primer arranque y verifica su checksum. Su uso queda sujeto a la licencia de Microsoft.
 
 Microsoft, Windows y Cortana son marcas de Microsoft Corporation. TuxAna es un proyecto independiente, no

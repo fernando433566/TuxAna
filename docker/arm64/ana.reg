@@ -1,0 +1,441 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{0A860B80-3773-4DDE-85B4-E68C520A858C}]
+@="SpSapiServer Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{0A860B80-3773-4DDE-85B4-E68C520A858C}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{0DD1B55E-2EB8-42E2-B8D0-F11594A29477}]
+@="SpStream Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{0DD1B55E-2EB8-42E2-B8D0-F11594A29477}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{0EEF5FBE-18F3-478A-BD28-4899C2E90323}]
+@="SpResourceManager Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{0EEF5FBE-18F3-478A-BD28-4899C2E90323}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{14E74C62-DC97-43B0-8F2F-581496A65D60}]
+@="SpMMAudioEnum Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{14E74C62-DC97-43B0-8F2F-581496A65D60}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{17383A17-6B93-4193-9B60-4D4F99C05163}]
+@="SpPhoneticAlphabetConverter Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{17383A17-6B93-4193-9B60-4D4F99C05163}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}]
+@="Microsoft TTS Desktop Engine Class - OneCore"
+
+[HKEY_CLASSES_ROOT\CLSID\{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}\InprocServer32]
+@="C:\\windows\\system32\\speech_onecore\\engines\\tts\\MSTTSEngine_OneCore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{209D8461-E6FB-49DD-A824-C9962A9D2F2B}]
+@="SpMSSemanticInterpretation Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{209D8461-E6FB-49DD-A824-C9962A9D2F2B}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{210DDC43-689C-46E3-BDC1-38C16C8F4C96}]
+@="SpObjectTokenEnum Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{210DDC43-689C-46E3-BDC1-38C16C8F4C96}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{25F843F3-1ED6-4B4E-8749-DF294C7FEB30}]
+@="SpStreamFormatConverter Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{25F843F3-1ED6-4B4E-8749-DF294C7FEB30}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{26EEC7CE-6C67-4568-BA8F-52BEA143D756}]
+@="SpW3CGrammarCompiler Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{26EEC7CE-6C67-4568-BA8F-52BEA143D756}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{2797B627-B7FA-4CBF-9472-6B8ACFDF3E41}]
+@="SpSharedRecoContext Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{2797B627-B7FA-4CBF-9472-6B8ACFDF3E41}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{27AAD1C8-3564-4A15-B0B8-F73F90FB95A7}]
+@="SpPhraseInfoBuilder Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{27AAD1C8-3564-4A15-B0B8-F73F90FB95A7}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{27D62E77-6AFE-4AAE-AF27-E6CC20A884D9}]
+@="SpVAMaster Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{27D62E77-6AFE-4AAE-AF27-E6CC20A884D9}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{28D18BFA-85E3-4419-9AFD-7ECCE53F8D13}]
+@="SpMMAudioInLegacy Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{28D18BFA-85E3-4419-9AFD-7ECCE53F8D13}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{351F7C7A-6186-405E-91A8-32DF82F437C0}]
+@="SpOneCoreFocusHandler Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{351F7C7A-6186-405E-91A8-32DF82F437C0}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4000C97B-791B-425F-9AD6-5046210503B1}]
+@="SpCommunicator Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{4000C97B-791B-425F-9AD6-5046210503B1}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{461DED9E-81D5-494F-BC96-6432C8645733}]
+@="SpObjectTokenCategory Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{461DED9E-81D5-494F-BC96-6432C8645733}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{47B73B70-1964-444A-B390-FAB1565DCAA3}]
+@="SpNotifyTranslator Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{47B73B70-1964-444A-B390-FAB1565DCAA3}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4F4DD15E-F431-4536-AEE8-AF20BA847A33}]
+@="SpNullPhoneConverter Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{4F4DD15E-F431-4536-AEE8-AF20BA847A33}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4F786E23-0F32-4888-BA02-6BB105AE3024}]
+@="SpWASAudioIn Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{4F786E23-0F32-4888-BA02-6BB105AE3024}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{5310BE71-5C14-4FBC-8CF5-BD75D3F11A44}]
+@="SpCustomStream Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{5310BE71-5C14-4FBC-8CF5-BD75D3F11A44}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{53E9771B-6A21-4FEC-B8F1-3B0DAE4FACC6}]
+@="CSpPredictorSet Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{53E9771B-6A21-4FEC-B8F1-3B0DAE4FACC6}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{57B67A1A-2C81-4820-96EC-FA33567A9155}]
+@="SpTaskManager Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{57B67A1A-2C81-4820-96EC-FA33567A9155}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{59BA10A2-E577-488D-BAFA-2D0A3D89D93B}]
+@="SpAudioOrchestrator Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{59BA10A2-E577-488D-BAFA-2D0A3D89D93B}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{5B9084E3-CE4E-4C66-8713-5B02396C090B}]
+@="SpVAEngineModel Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{5B9084E3-CE4E-4C66-8713-5B02396C090B}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{62547D24-2ACA-4A33-8F15-AE95CE1A45BD}]
+@="SpFileStream Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{62547D24-2ACA-4A33-8F15-AE95CE1A45BD}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{626C80C1-D410-4DE4-9E82-1B4B9610C404}]
+@="SpSharedAudioIn Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{626C80C1-D410-4DE4-9E82-1B4B9610C404}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{636B1538-4AD1-4FA5-831A-403D7146B11D}]
+@="SpITNProcessor Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{636B1538-4AD1-4FA5-831A-403D7146B11D}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{655D9BF9-3876-43D0-B6E8-C83C1224154C}]
+@="SpAudioOrchestratorPolicy Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{655D9BF9-3876-43D0-B6E8-C83C1224154C}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{67677441-3350-45B4-9455-4D7F4A50F4E4}]
+@="SpLexicon Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{67677441-3350-45B4-9455-4D7F4A50F4E4}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{67EA3D48-83F2-408C-AD46-97F207D79DB3}]
+@="SpDMOAudioIn Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{67EA3D48-83F2-408C-AD46-97F207D79DB3}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{6BFCACDC-A6A6-4343-9CF6-83A83727367B}]
+@="SpSwVAEngine Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{6BFCACDC-A6A6-4343-9CF6-83A83727367B}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{83F18638-2238-4B33-9FF8-24E759ADDC66}]
+@="SpPhraseBuilder Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{83F18638-2238-4B33-9FF8-24E759ADDC66}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{846225EA-B241-42A7-9D46-A694ECD5A781}]
+@="SpSharedRecognizer Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{846225EA-B241-42A7-9D46-A694ECD5A781}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{85AFC315-CAC7-4475-875B-D7161BA14874}]
+@="SpInProcRecoContext Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{85AFC315-CAC7-4475-875B-D7161BA14874}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8A44FFB7-8140-432F-BEC5-1B5FF725BAC8}]
+@="SpInprocRecognizer Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8A44FFB7-8140-432F-BEC5-1B5FF725BAC8}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9440F424-33D8-4114-BC6E-033867239A09}]
+@="SpWASAudioHistory Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9440F424-33D8-4114-BC6E-033867239A09}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9A4B942C-C16D-44D2-BDAA-1BD772A4050B}]
+@="SpTextSelectionInformation Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9A4B942C-C16D-44D2-BDAA-1BD772A4050B}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9BC773B8-9B6C-400F-8AF0-0DFDD1C43229}]
+@="SpVoice Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9BC773B8-9B6C-400F-8AF0-0DFDD1C43229}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9D7F0E95-8848-47B3-8D0E-E6C0E396E640}]
+@="SpRemoteCaller Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9D7F0E95-8848-47B3-8D0E-E6C0E396E640}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9FF65B15-F7B4-4858-BFE6-DB2083DEDF68}]
+@="SpObjectToken Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9FF65B15-F7B4-4858-BFE6-DB2083DEDF68}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A63E13D5-5263-44A6-8A18-381EB6F181A2}]
+@="SpMMAudioIn Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{A63E13D5-5263-44A6-8A18-381EB6F181A2}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B786ECB7-8942-4FE1-9DCD-230E30DE5AFF}]
+@="SpShortcut Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B786ECB7-8942-4FE1-9DCD-230E30DE5AFF}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{BC065925-E8EF-4EF7-B8C5-006C8DB832D5}]
+@="SpMMAudioOut Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{BC065925-E8EF-4EF7-B8C5-006C8DB832D5}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C6FABB24-E332-46FB-BC91-FF331B2D51F0}]
+@="SpPhoneConverter Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C6FABB24-E332-46FB-BC91-FF331B2D51F0}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{CAC59BFB-5547-456C-80D8-F6428C8F5456}]
+@="SpCFGEngine Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{CAC59BFB-5547-456C-80D8-F6428C8F5456}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{CE2BB7DC-73F3-482F-90B6-5BFAA04D0157}]
+@="SpRecoMaster Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{CE2BB7DC-73F3-482F-90B6-5BFAA04D0157}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D1915118-9D27-4C69-B82E-7955DAF57201}]
+@="SpUncompressedLexicon Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D1915118-9D27-4C69-B82E-7955DAF57201}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D3C4B7DB-E7BB-4778-89A2-E4B0EE41C29F}]
+@="SpMemoryStream Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D3C4B7DB-E7BB-4778-89A2-E4B0EE41C29F}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D48DAF56-ADD3-4FDF-BC8C-C1F239115BBA}]
+@="SpRemoteReceiver Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D48DAF56-ADD3-4FDF-BC8C-C1F239115BBA}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D5029E5D-F109-4BC0-B6DB-07F92D6ABAE7}]
+@="SpPLSLexcicon Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D5029E5D-F109-4BC0-B6DB-07F92D6ABAE7}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D65B9994-6416-41ED-84EE-08733558C381}]
+@="SpCompressedLexicon Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D65B9994-6416-41ED-84EE-08733558C381}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D6707039-94AB-490A-95D6-C268524D8B8F}]
+@="SpDataKey Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D6707039-94AB-490A-95D6-C268524D8B8F}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{DF9144AE-8785-4B2B-93AD-A775CE6B6C42}]
+@="SpGrammarCompiler Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{DF9144AE-8785-4B2B-93AD-A775CE6B6C42}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{E164F996-FF93-4675-BDD8-6C47AB0B86B1}]
+@="SpHwVAEngine Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{E164F996-FF93-4675-BDD8-6C47AB0B86B1}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{E979DAD9-25E8-45D7-AB42-43FB7B9F38CC}]
+@="SpW3CSemanticInterpretation Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{E979DAD9-25E8-45D7-AB42-43FB7B9F38CC}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{EB36A2D2-BA9E-457F-8023-66EE08D4D955}]
+@="SpGramCompBackEnd Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{EB36A2D2-BA9E-457F-8023-66EE08D4D955}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{F375FDC3-9DB0-4927-A84A-FC1215B3570F}]
+@="SpWaveFormatEx Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{F375FDC3-9DB0-4927-A84A-FC1215B3570F}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{F7FF39BA-FA79-11E4-87DA-8F461D5D46B0}]
+@="SpWASAudioBurstRead Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{F7FF39BA-FA79-11E4-87DA-8F461D5D46B0}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{FA2C37A7-2D1E-444F-AD7B-D946823A7072}]
+@="SpSharedRecoInst Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{FA2C37A7-2D1E-444F-AD7B-D946823A7072}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{FC31D09D-D059-4551-9A28-B88A4181EC29}]
+@="SpAudioFormat Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{FC31D09D-D059-4551-9A28-B88A4181EC29}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{FF99E1C1-7F9A-4C83-8A57-305992EDD07B}]
+@="SpActiveSystemUserInformation Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{FF99E1C1-7F9A-4C83-8A57-305992EDD07B}\InprocServer32]
+@="C:\\windows\\system32\\Speech_OneCore\\Common\\sapi_onecore.dll"
+"ThreadingModel"="Both"
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Foundation.Collections.Detail.Vector]
+"ActivationType"=dword:00000000
+"DllPath"="C:\\windows\\system32\\wintypes.dll"
+"Threading"=dword:00000000
+"TrustLevel"=dword:00000000

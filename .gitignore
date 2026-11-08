@@ -9,3 +9,4 @@ windows-files/files.tmp/
 dist/images/
 dist/.out-*/
 *.tar
+windows-files/.iso-tmp.*

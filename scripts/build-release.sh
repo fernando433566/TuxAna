@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Compila todo para publicar una versión, en un PC x86_64 con Docker y buildx:
-#   dist/bin/windows/   ana-engine.exe, rmproxy.dll        (se ejecutan dentro de Wine)
+#   dist/bin/windows-amd64/  ana-engine.exe, rmproxy.dll   (se ejecutan dentro de Wine en x86_64)
+#   dist/bin/windows-arm64/  ana-engine.exe                (se ejecuta dentro de Wine en ARM64)
 #   dist/bin/amd64/     tuxana                              (servidor Wyoming para Linux x86_64)
 #   dist/bin/arm64/     tuxana                              (servidor Wyoming para Linux ARM64)
 #   dist/images/        tuxana-<versión>-amd64.tar, tuxana-<versión>-arm64.tar   (imágenes Docker)
@@ -11,7 +12,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 VERSION="$(grep -m1 '^version' server/Cargo.toml | cut -d'"' -f2)"
-mkdir -p dist/bin/windows dist/bin/amd64 dist/bin/arm64 dist/images
+mkdir -p dist/bin/windows-amd64 dist/bin/windows-arm64 dist/bin/amd64 dist/bin/arm64 dist/images
 
 for arch in amd64 arm64; do
   echo "==> imagen $arch"
@@ -22,7 +23,7 @@ for arch in amd64 arm64; do
   # la etapa "binaries" del Dockerfile contiene solo los programas compilados
   docker buildx build --platform "linux/$arch" --target binaries -o "type=local,dest=dist/.out-$arch" .
   cp "dist/.out-$arch/tuxana" "dist/bin/$arch/"
-  cp "dist/.out-$arch/windows/"* dist/bin/windows/
+  cp "dist/.out-$arch/windows/"* "dist/bin/windows-$arch/"
   rm -rf "dist/.out-$arch"
 done
 

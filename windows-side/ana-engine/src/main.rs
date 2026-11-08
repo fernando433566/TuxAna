@@ -1,6 +1,6 @@
 //! ana-engine.exe: Microsoft Ana (the Spanish voice of Cortana) as a long-running process.
 //!
-//! It runs inside Wine. It loads the voice once, then waits for texts on stdin and writes the
+//! It runs inside Wine, compiled for the CPU of the container (x86_64 or ARM64). It loads the voice once, then waits for texts on stdin and writes the
 //! audio to stdout *while* SAPI is producing it. The Linux `tuxana` server is its only client.
 //!
 //! Wire protocol (every integer is a little-endian u32):
@@ -27,20 +27,38 @@ use windows::core::{implement, Result, GUID, HRESULT, HSTRING};
 use windows::Win32::Foundation::{E_FAIL, E_NOTIMPL, S_OK};
 use windows::Win32::Media::Audio::{WAVEFORMATEX, WAVE_FORMAT_PCM};
 use windows::Win32::Media::Speech::{ISpObjectToken, ISpStream, ISpVoice, SPF_IS_NOT_XML, SPF_IS_XML};
+#[cfg(target_arch = "aarch64")]
+use windows::Win32::Media::Speech::ISpObjectTokenCategory;
 use windows::Win32::System::Com::{
     CoCreateInstance, CoInitializeEx, ISequentialStream_Impl, IStream, IStream_Impl, CLSCTX_INPROC_SERVER,
     COINIT_MULTITHREADED, LOCKTYPE, STATFLAG, STATSTG, STGC, STGTY_STREAM, STREAM_SEEK,
 };
 
-// Classes of the Microsoft Speech Platform 11 runtime (mssps.dll), which hosts the OneCore engine.
-const CLSID_SP_VOICE: GUID = GUID::from_u128(0xd941651c_44e6_4c17_badf_c36826fc3424);
-const CLSID_SP_STREAM: GUID = GUID::from_u128(0x0f59bf10_9fa9_4469_b4d3_d83d939b4ac3);
-const CLSID_SP_OBJECT_TOKEN: GUID = GUID::from_u128(0x4424cb70_2a7c_43e2_833d_cbfd82da104f);
+/// The SAPI that hosts the OneCore engine depends on the CPU.
+#[cfg(target_arch = "x86_64")]
+mod host {
+    //! x86_64: the Microsoft Speech Platform 11 runtime (mssps.dll).
+    use windows::core::GUID;
+    pub const CLSID_SP_VOICE: GUID = GUID::from_u128(0xd941651c_44e6_4c17_badf_c36826fc3424);
+    pub const CLSID_SP_STREAM: GUID = GUID::from_u128(0x0f59bf10_9fa9_4469_b4d3_d83d939b4ac3);
+    pub const CLSID_SP_OBJECT_TOKEN: GUID = GUID::from_u128(0x4424cb70_2a7c_43e2_833d_cbfd82da104f);
+    /// Registry token of the voice (created by the container's `ana.reg`).
+    pub const ANA_TOKEN: &str = r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech Server\v11.0\Voices\Tokens\MSTTS_V110_esES_Ana";
+}
+
+#[cfg(target_arch = "aarch64")]
+mod host {
+    //! ARM64: the ARM64 build of sapi_onecore.dll from Windows (10 or 11), the same SAPI Windows itself uses.
+    use windows::core::GUID;
+    pub const CLSID_SP_VOICE: GUID = GUID::from_u128(0x9bc773b8_9b6c_400f_8af0_0dfdd1c43229);
+    pub const CLSID_SP_STREAM: GUID = GUID::from_u128(0x0dd1b55e_2eb8_42e2_b8d0_f11594a29477);
+    pub const CLSID_SP_TOKEN_CATEGORY: GUID = GUID::from_u128(0x461ded9e_81d5_494f_bc96_6432c8645733);
+    /// Registry category that lists the OneCore voices (sapi_onecore fills it from its token XML files).
+    pub const VOICES_CATEGORY: &str = r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech_OneCore\Voices";
+}
+
 /// "The stream contains raw PCM described by a WAVEFORMATEX".
 const SPDFID_WAVEFORMATEX: GUID = GUID::from_u128(0xc31adbae_527f_4ff5_a230_f62bb61ff70c);
-/// Registry token of the voice (created by the container's `ana.reg`).
-const ANA_TOKEN: &str = r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech Server\v11.0\Voices\Tokens\MSTTS_V110_esES_Ana";
-
 const FRAME_READY: u32 = 0;
 const FRAME_AUDIO: u32 = 1;
 const FRAME_DONE: u32 = 2;
@@ -80,17 +98,41 @@ fn run() -> Result<()> {
     Ok(()) // stdin closed: the server is gone
 }
 
-/// Creates a Speech Platform voice object and selects Microsoft Ana.
+/// Creates the SAPI voice object and selects Microsoft Ana.
 fn load_ana(speaking_rate: i32) -> Result<ISpVoice> {
     unsafe {
         CoInitializeEx(None, COINIT_MULTITHREADED).ok()?;
-        let voice: ISpVoice = CoCreateInstance(&CLSID_SP_VOICE, None, CLSCTX_INPROC_SERVER)?;
-        let token: ISpObjectToken = CoCreateInstance(&CLSID_SP_OBJECT_TOKEN, None, CLSCTX_INPROC_SERVER)?;
-        token.SetId(None, &HSTRING::from(ANA_TOKEN), false)?;
+        let voice: ISpVoice = CoCreateInstance(&host::CLSID_SP_VOICE, None, CLSCTX_INPROC_SERVER)?;
+        let token = ana_token()?;
         voice.SetVoice(&token)?;
         voice.SetRate(speaking_rate)?;
         Ok(voice)
     }
+}
+
+/// x86_64: the token is registered directly in the registry.
+#[cfg(target_arch = "x86_64")]
+unsafe fn ana_token() -> Result<ISpObjectToken> {
+    let token: ISpObjectToken = CoCreateInstance(&host::CLSID_SP_OBJECT_TOKEN, None, CLSCTX_INPROC_SERVER)?;
+    token.SetId(None, &HSTRING::from(host::ANA_TOKEN), false)?;
+    Ok(token)
+}
+
+/// ARM64: sapi_onecore builds the token list from its XML files, so we ask it for Ana.
+#[cfg(target_arch = "aarch64")]
+unsafe fn ana_token() -> Result<ISpObjectToken> {
+    let category: ISpObjectTokenCategory = CoCreateInstance(&host::CLSID_SP_TOKEN_CATEGORY, None, CLSCTX_INPROC_SERVER)?;
+    category.SetId(&HSTRING::from(host::VOICES_CATEGORY), false)?;
+    let tokens = category.EnumTokens(None, None)?;
+    let mut count = 0u32;
+    tokens.GetCount(&mut count)?;
+    for index in 0..count {
+        let token = tokens.Item(index)?;
+        if token.GetId()?.to_string().unwrap_or_default().ends_with("MSTTS_V110_esES_Ana") {
+            return Ok(token);
+        }
+    }
+    Err(E_FAIL.into())
 }
 
 /// Synthesizes `text`. Returns when SAPI has finished; the audio has been written by then.
@@ -99,7 +141,7 @@ fn speak(voice: &ISpVoice, format: &WAVEFORMATEX, text: &str, is_ssml: bool, out
     unsafe {
         // SAPI writes into an ISpStream; we give it a base stream (PcmSink) that forwards every write.
         let sink: IStream = PcmSink::new(output).into();
-        let stream: ISpStream = CoCreateInstance(&CLSID_SP_STREAM, None, CLSCTX_INPROC_SERVER)?;
+        let stream: ISpStream = CoCreateInstance(&host::CLSID_SP_STREAM, None, CLSCTX_INPROC_SERVER)?;
         stream.SetBaseStream(&sink, &SPDFID_WAVEFORMATEX, format)?;
         voice.SetOutput(&stream, false)?;
         voice.Speak(&HSTRING::from(text), flags.0 as u32, None)

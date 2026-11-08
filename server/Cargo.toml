@@ -1,6 +1,6 @@
 [package]
 name = "tuxana"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 description = "Wyoming text-to-speech server for Microsoft Ana (Cortana's Spanish voice) running in Wine"
 
